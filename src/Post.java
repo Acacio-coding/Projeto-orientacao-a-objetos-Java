@@ -1,33 +1,58 @@
-public class Post{
-    int authorId;
-    String author;
-    String content;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
-    Like likes;
-    Comment comments;
-    Share shares;
+public class Post {
+    private final User author;
+    private String title;
+    private final LocalDate creationDate;
+    private String content;
+    private final ArrayList<Like> likes;
+    private final ArrayList<Comment> comments;
+    private final ArrayList<Share> shares;
 
-    public int getAuthorId(){
-        return authorId;
+    public Post(User author, String title, LocalDate creationDate, String content) {
+        this.author = author;
+        this.title = title;
+        this.creationDate = creationDate;
+        this.content = content;
+        this.likes = new ArrayList<>();
+        this.comments = new ArrayList<>();
+        this.shares = new ArrayList<>();
     }
 
-    public void setAuthorId(int authorId) {
-        this.authorId = authorId;
-    }
-
-    public String getAuthor(){
+    public User getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author){
-        this.author = author;
+    public String getTitle() {
+        return title;
     }
 
-    public String getContent(){
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public LocalDate getCreationDate() {
+        return creationDate;
+    }
+
+    public String getContent() {
         return content;
     }
 
-    public void setContent(String content){
+    public void setContent(String content) {
         this.content = content;
+    }
+
+    public ArrayList<Like> getLikes() {
+        return likes;
+    }
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+
+    public ArrayList<Share> getShares() {
+        return shares;
     }
 }

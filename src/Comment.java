@@ -1,38 +1,29 @@
-public class Comment{
-    int numComments;
-    int[] userId = new int[25];
-    String[] userName = new String[25];
-    String[] content = new String[25];
+import java.time.LocalDate;
 
-    public int getUserId(int position){
-        return userId[position];
+public class Comment {
+    private final User user;
+    private final LocalDate commentDate;
+    private String content;
+
+    public Comment(User user, LocalDate commentDate, String content) {
+        this.user = user;
+        this.commentDate = commentDate;
+        this.content = content;
     }
 
-    public void setUserId(int userId, int position){
-        this.userId[position] = userId;
+    public User getUser() {
+        return user;
     }
 
-    public int getNumComments(){
-        return numComments;
+    public LocalDate getCommentDate() {
+        return commentDate;
     }
 
-    public void setNumComments(){
-        this.numComments++;
+    public String getContent() {
+        return content;
     }
 
-    public String getUserName(int position){
-        return userName[position];
-    }
-
-    public void setUserName(String userName, int position){
-        this.userName[position] = userName;
-    }
-
-    public String getContent(int position){
-        return content[position];
-    }
-
-    public void setContent(String content, int position){
-        this.content[position] = content;
+    public void setContent(String content) {
+        this.content = content;
     }
 }

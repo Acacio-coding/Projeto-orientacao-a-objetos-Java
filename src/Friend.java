@@ -1,29 +1,11 @@
-public class Friend{
-    int numFriends;
-    int[] userId = new int[4];
-    String[] userName = new String[4];
+public class Friend {
+    private final User user;
 
-    public int getUserId(int position){
-        return userId[position];
+    public Friend(User user) {
+        this.user = user;
     }
 
-    public void setUserId(int userId, int position){
-        this.userId[position] = userId;
-    }
-
-    public int getNumFriends(){
-        return numFriends;
-    }
-
-    public void setNumFriends(int num){
-        this.numFriends++;
-    }
-
-    public String getUserName(int position){
-        return userName[position];
-    }
-
-    public void setUserName(String userName, int position){
-        this.userName[position] = userName;
+    public User getUser() {
+        return user;
     }
 }
