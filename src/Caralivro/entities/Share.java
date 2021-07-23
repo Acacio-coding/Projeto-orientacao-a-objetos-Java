@@ -1,3 +1,5 @@
+package Caralivro.entities;
+
 import java.time.LocalDate;
 
 public class Share {
@@ -7,6 +9,11 @@ public class Share {
     public Share(User user, LocalDate shareDate) {
         this.user = user;
         this.shareDate = shareDate;
+    }
+
+    public Share(User user) {
+        this.user = user;
+        this.shareDate = null;
     }
 
     public User getUser() {

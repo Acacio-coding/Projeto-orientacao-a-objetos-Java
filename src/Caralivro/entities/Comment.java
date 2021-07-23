@@ -1,3 +1,5 @@
+package Caralivro.entities;
+
 import java.time.LocalDate;
 
 public class Comment {
@@ -9,6 +11,12 @@ public class Comment {
         this.user = user;
         this.commentDate = commentDate;
         this.content = content;
+    }
+
+    public Comment(User user) {
+        this.user = user;
+        this.commentDate = null;
+        this.content = null;
     }
 
     public User getUser() {

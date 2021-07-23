@@ -1,3 +1,5 @@
+package Caralivro.entities;
+
 import java.time.LocalDate;
 
 public class Like {
@@ -7,6 +9,11 @@ public class Like {
     public Like(User user, LocalDate likeDate) {
         this.user = user;
         this.likeDate = likeDate;
+    }
+
+    public Like(User user) {
+        this.user = user;
+        this.likeDate = null;
     }
 
     public User getUser() {

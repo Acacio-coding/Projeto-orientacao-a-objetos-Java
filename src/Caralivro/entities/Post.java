@@ -1,3 +1,5 @@
+package Caralivro.entities;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -15,6 +17,16 @@ public class Post {
         this.title = title;
         this.creationDate = creationDate;
         this.content = content;
+        this.likes = new ArrayList<>();
+        this.comments = new ArrayList<>();
+        this.shares = new ArrayList<>();
+    }
+
+    public Post(User author, LocalDate creationDate) {
+        this.author = author;
+        this.title = null;
+        this.creationDate = creationDate;
+        this.content = null;
         this.likes = new ArrayList<>();
         this.comments = new ArrayList<>();
         this.shares = new ArrayList<>();
